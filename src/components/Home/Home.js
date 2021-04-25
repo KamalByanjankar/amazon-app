@@ -9,7 +9,7 @@ function Home() {
                 <img 
                     className="home__image"
                     src="https://images-eu.ssl-images-amazon.com/images/G/03/kindle/journeys/YTNkYTJjMWMt/YTNkYTJjMWMt-YTMyZjZjMzAt-w1500._CB657354263_.jpg"
-                    alt="Image"
+                    alt="header"
                 />
 
                 <div className="home__row">

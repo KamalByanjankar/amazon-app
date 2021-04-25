@@ -12,15 +12,15 @@ function Product({title, price, rating, image}) {
                     <strong>{price}</strong>
                 </p>
                 <div className="product__rating">
-                    {Array(rating).fill(
-                        <span class="fa fa-star checked"></span>
+                    {Array(rating).fill().map((_, i) =>
+                        <span key={i} className="fa fa-star checked"></span>
                     )}
                 
                 </div>
                 <img 
                     className="product__image"
                     src={image}
-                    alt="Product Image"                
+                    alt="Product"                
                 />
             </div>
             <button className="product__button">
