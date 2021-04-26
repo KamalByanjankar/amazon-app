@@ -43,7 +43,6 @@
 .header__nav {
   display: flex;
   justify-content: space-between;
-  color: white;
 }
 
 .header__list {
@@ -72,8 +71,10 @@
   display: flex;
   align-items: center;
   margin: 0 10px 0 5px;
+  color: white;
 }
 
 .header__basketCount {
   margin: 0 10px 0 5px;
+  color: white;
 }
