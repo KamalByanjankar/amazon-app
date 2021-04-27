@@ -17,7 +17,7 @@ function Header() {
                 <img 
                     className="header__logo"
                     src="https://boostedmedia.net/wp-content/uploads/2019/11/white-amazon-logo-png-6.png"
-                    alt="Logo"
+                    alt="Amazon"
                 />
             </Link>
             
@@ -42,14 +42,19 @@ function Header() {
             </div>
 
             <div className="header__nav">
-                <div className="header__list">
-                    <span className="header__listOne">
-                        Hello, Sign in
-                    </span>
-                    <span className="header__listTwo">
-                        Account
-                    </span>
-                </div>
+                <Link to="/login">
+                    <div className="header__list">
+                        <span 
+                            className="header__listOne"
+                        >
+                            Hello, Sign in
+                        </span>
+                        <span className="header__listTwo">
+                            Account
+                        </span>
+                    </div>
+                </Link>
+                
 
                 <div className="header__list">
                     <span className="header__listOne">
