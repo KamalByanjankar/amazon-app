@@ -1,13 +1,14 @@
 import React from 'react'
 import { useStateValue } from '../../context/StateProvider';
 import './Product.css'
+import "react-toastify/dist/ReactToastify.css"
 
 
 function Product({title, price, rating, image}) {
     const [ , dispatch ] = useStateValue();
 
     const addToBasket = () => {
-        //add item to the data layer
+        //add item to the data layer  
         dispatch({
             type: "ADD_TO_BASKET",
             item:{
@@ -15,8 +16,7 @@ function Product({title, price, rating, image}) {
                 price: price, 
                 rating: rating,
                 image: image,
-            },
-                
+            },    
         })
     }
 
