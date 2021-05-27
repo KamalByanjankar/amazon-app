@@ -14,6 +14,7 @@ function Home() {
 
                 <div className="home__row">
                     <Product
+                        id={1}
                         title="The Lean Startup: How Constant Innovation Creates Radically Successful Businesses"
                         price={19.99}
                         rating= {4}
@@ -21,6 +22,7 @@ function Home() {
 
                     />
                     <Product
+                        id={2}
                         title="Philips UI Coffee Machine"
                         price={299.99}
                         rating={4}
@@ -29,18 +31,21 @@ function Home() {
                 </div>
                 <div className="home__row">
                     <Product
+                        id={3}
                         title="Tommy Hilfiger 1781976 Ladies’ Multi-Dial Quartz Watch with Stainless Steel Strap"
                         price={139.72}
                         rating={4}
                         image="https://m.media-amazon.com/images/I/811ESn6Gk6L._AC_UL480_FMwebp_QL65_.jpg"
                     />
                     <Product
+                        id={4}
                         title="Lenovo IdeaPad 3 Chromebook Laptop 35.6 cm (14 Inches, 1366 x 768, HD, Anti-Glare) Slim Notebook (Intel Celeron N4020, 4GB RAM, 64GB eMMC, Intel UHD Graphics 600, ChromeOS) Silver"
                         price={559.99}
                         rating={3}
                         image="https://m.media-amazon.com/images/I/413BhtTJ7nL._AC_UY327_FMwebp_QL65_.jpg"
                     />
                     <Product
+                        id={5}
                         title="Vans Women's Wm Ward trainers"
                         price={52.72}
                         rating={4}
@@ -49,6 +54,7 @@ function Home() {
                 </div>
                 <div className="home__row">
                     <Product
+                        id={6}
                         title="Dyon LED TV (Triple Tuner (DVB-C/-S2/-T2), Hotel Mode, USB Media Player)"
                         price={219.99}
                         rating={4}

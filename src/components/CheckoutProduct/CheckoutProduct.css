@@ -9,10 +9,12 @@
   width: 180px;
   height: 180px;
   object-fit: contain;
+  flex: 0.2;
 }
 
 .checkoutProduct__info {
   padding-left: 20px;
+  flex: 0.8;
 }
 
 .checkoutProduct__info > button {

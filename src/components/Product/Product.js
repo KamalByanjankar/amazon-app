@@ -4,7 +4,7 @@ import './Product.css'
 import "react-toastify/dist/ReactToastify.css"
 
 
-function Product({title, price, rating, image}) {
+function Product({id, title, price, rating, image}) {
     const [ , dispatch ] = useStateValue();
 
     const addToBasket = () => {
@@ -12,6 +12,7 @@ function Product({title, price, rating, image}) {
         dispatch({
             type: "ADD_TO_BASKET",
             item:{
+                id: id,
                 title: title,
                 price: price, 
                 rating: rating,
