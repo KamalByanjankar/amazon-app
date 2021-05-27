@@ -9,9 +9,7 @@ function Payment() {
     return (
         <div className="payment"> 
             <div className="payment__container">
-                <div className="payment__section">
-                    <h3>Checkout ({basket?.length} items)</h3>
-                </div>
+                <h1>Checkout ({basket?.length} items)</h1>
 
                 <div className="payment__section">
                     <div className="payment__title">
