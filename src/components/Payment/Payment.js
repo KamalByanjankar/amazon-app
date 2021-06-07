@@ -51,7 +51,9 @@ function Payment() {
                     </div>
 
                     <div className="payment__details">
-                        <p>Payment with stripe functionality goes here</p>
+                        {/* <form>
+                            <CardElement />
+                        </form> */}
                     </div>
                 </div>
             </div>

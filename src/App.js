@@ -9,10 +9,16 @@ import Login from './components/Login/Login';
 import { auth } from './context/firebase';
 import { useStateValue } from './context/StateProvider';
 import Payment from './components/Payment/Payment';
+import { Elements } from '@stripe/react-stripe-js';
+import { loadStripe } from '@stripe/stripe-js';
 
+
+const promise = loadStripe(
+  "pk_test_51IzhUOFcBR3kgYtxel3KiSCZ5A7rHa0qMCN4xssBGVWLsFNpXeFhL39Qdh7bcV305ImNNHOAhlAqIiqqtR4fYtkw00D1wNUv52"
+)
 
 function App() {
-  const [ , dispatch ] = useStateValue()
+  const [{}, dispatch ] = useStateValue()
 
   useEffect(() => {
     auth.onAuthStateChanged(authUser => {
@@ -48,7 +54,9 @@ function App() {
 
           <Route path="/payment">
             <Header />
-            <Payment />
+            <Elements stripe={promise}>
+              <Payment />
+            </Elements>
           </Route>
 
           <Route path="/">
