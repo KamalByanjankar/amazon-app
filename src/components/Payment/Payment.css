@@ -21,6 +21,17 @@
 }
 
 .payment__address,
-.payment__items {
+.payment__items,
+.payment__details {
   flex: 0.8;
+}
+
+.payment__priceContainer {
+  margin: 10px 0;
+}
+
+.payment__paymentButton {
+  padding: 6px 10px;
+  font-size: 14px;
+  margin-top: 20px;
 }
