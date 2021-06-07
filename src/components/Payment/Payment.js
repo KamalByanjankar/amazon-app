@@ -17,6 +17,8 @@ function Payment() {
     const [clientSecret, setClientSecret] = useState(true)
 
     const history = useHistory()
+    const stripe = useStripe()
+    const elements = useElements()
 
     //for generating stripe secret which allows us to charge a customer
     useEffect(() => {
@@ -30,8 +32,7 @@ function Payment() {
         getClientSecret()
     }, [basket])
 
-    const stripe = useStripe()
-    const elements = useElements()
+    console.log('The secret is >>>>', clientSecret)
 
 
     //handles card number and submit
@@ -45,6 +46,8 @@ function Payment() {
             }
         }).then(({ paymentIntent }) => {
             //payment confirmation
+            
+
             setSucceeded(true)
             setError(null)
             setProcessing(false)
