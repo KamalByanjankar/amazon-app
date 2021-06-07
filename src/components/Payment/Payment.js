@@ -6,6 +6,7 @@ import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import CurrencyFormat from 'react-currency-format';
 import { getBasketTotal } from '../../context/reducer';
 import axios from '../../context/axios'
+import { useHistory } from 'react-router-dom';
 
 function Payment() {
     const [{user, basket}] = useStateValue()
@@ -14,6 +15,8 @@ function Payment() {
     const [succeeded, setSucceeded] = useState(false)
     const [processing, setProcessing] = useState("")
     const [clientSecret, setClientSecret] = useState(true)
+
+    const history = useHistory()
 
     //for generating stripe secret which allows us to charge a customer
     useEffect(() => {
@@ -46,7 +49,7 @@ function Payment() {
             setError(null)
             setProcessing(false)
 
-            // history.replace('/orders')
+            history.replace('/orders')
         })
     }
 
