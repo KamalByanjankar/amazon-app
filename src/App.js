@@ -14,11 +14,11 @@ import { loadStripe } from '@stripe/stripe-js';
 
 
 const promise = loadStripe(
-  "pk_test_51IzhUOFcBR3kgYtxel3KiSCZ5A7rHa0qMCN4xssBGVWLsFNpXeFhL39Qdh7bcV305ImNNHOAhlAqIiqqtR4fYtkw00D1wNUv52"
+  "STRIPE_KEY"
 )
 
 function App() {
-  const [{}, dispatch ] = useStateValue()
+  const [ , dispatch ] = useStateValue()
 
   useEffect(() => {
     auth.onAuthStateChanged(authUser => {
