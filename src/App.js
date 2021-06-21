@@ -45,6 +45,7 @@ function App() {
       <Router>
         <Switch>
           <Route path="/orders">
+            <Header />
             <Orders />
           </Route>
 

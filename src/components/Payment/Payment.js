@@ -7,9 +7,10 @@ import CurrencyFormat from 'react-currency-format';
 import { getBasketTotal } from '../../context/reducer';
 import axios from '../../context/axios'
 import { useHistory } from 'react-router-dom';
+import { db } from '../../context/firebase';
 
 function Payment() {
-    const [{user, basket}] = useStateValue()
+    const [{user, basket}, dispatch] = useStateValue()
     const [disabled, setDisabled] = useState(true)
     const [error, setError] = useState(null)
     const [succeeded, setSucceeded] = useState(false)
@@ -48,6 +49,16 @@ function Payment() {
         }).then(({ paymentIntent }) => {
             //payment confirmation
             
+            db
+                .collection('users')
+                .doc(user?.uid)
+                .collection('orders')
+                .doc(paymentIntent.id)
+                .set({
+                    basket: basket,
+                    amount: paymentIntent.amount,
+                    created: paymentIntent.created
+                })
 
             setSucceeded(true)
             setError(null)
